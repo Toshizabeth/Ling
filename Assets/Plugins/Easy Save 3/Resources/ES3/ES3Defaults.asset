@@ -32,13 +32,14 @@ MonoBehaviour:
     - Zenject
     - UniTask
     - UniRx
+    - MessagePipe
     - DOTweenPro.Scripts
     - EZ3
     - Utility
     - UniTask.Linq
     - Cinemachine
-    - Ling.Scenes
     - Ling.Scenes.MenuScene
+    - Ling.Scenes
     - ZString
     - Ling.Map
     - Ling.Scenes.BattleScene
@@ -59,16 +60,16 @@ MonoBehaviour:
     - Ling.Scenes.InputScene
     - Ling.Scenes.TitleScene
     - UniTask.Addressables
-    - MessagePipe
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
+    - CsprojModifier.Editor
     - EZ3.Editor
     - UtilityEditor
     - UniTask.Editor
     - Zenject-TestFramework
+    - MessagePipe.Editor
     - DOTweenPro.EditorScripts
     - CommonEditor
     - Analytics
-    - MessagePipe.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

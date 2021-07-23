@@ -15,8 +15,6 @@ using Zenject;
 using MessagePipe;
 using System.Threading;
 
-using Assert = UnityEngine.Assertions.Assert;
-
 
 namespace Ling.Tests.EditMode.Plugin.MessagePipeTest
 {
@@ -266,6 +264,13 @@ namespace Ling.Tests.EditMode.Plugin.MessagePipeTest
 
 			return UniTask.ToCoroutine(async () => await UniTask.WhenAll(task1, task2));
 		}
+
+		[UnityTest]
+		public IEnumerator あえてエラー出す() =>
+			UniTask.ToCoroutine(async () =>
+				{
+					Assert.False(true);
+				});
 
 		#endregion
 

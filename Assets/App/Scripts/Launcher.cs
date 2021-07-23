@@ -6,6 +6,8 @@
 //
 
 using Zenject;
+using MessagePipe;
+using UniRx;
 
 namespace Ling
 {
@@ -58,6 +60,12 @@ namespace Ling
 #if DEBUG
 			_debugManager.Setup(_debugRoot);
 #endif
+
+			var subscriber = GlobalMessagePipe.GetSubscriber<Common.NoticeEvent>();
+			subscriber.Subscribe(ev => 
+				{
+					UnityEngine.Debug.Log(ev.Message);
+				}).AddTo(this);
 		}
 
 		#endregion
